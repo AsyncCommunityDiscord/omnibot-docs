@@ -105,11 +105,11 @@ const config: Config = {
           items: [
             {
               label: "Documentation Utilisateur",
-              to: "/docs/user",
+              to: "/docs/user/intro",
             },
             {
               label: "Documentation Développeur",
-              to: "/docs/dev",
+              to: "/docs/dev/intro",
             },
           ],
         },
@@ -125,10 +125,6 @@ const config: Config = {
         {
           title: "Plus",
           items: [
-            {
-              label: "Blog",
-              to: "/blog",
-            },
             {
               label: "GitHub",
               href: "https://github.com/AsyncCommunityDiscord/OmniBot",
