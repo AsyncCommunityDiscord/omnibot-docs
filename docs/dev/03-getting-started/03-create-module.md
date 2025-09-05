@@ -1,6 +1,7 @@
 ---
 title: 3. Créer le module
 ---
+
 # Créer le module
 
 ## Pourquoi commencer par le module ?
@@ -36,7 +37,7 @@ export default defineModule({
     // Quand le module se charge au démarrage du bot
     onLoad(client, registry) {
         // On enregistrera les composants ici
-        
+
         console.log("Module Rôles par Réactions chargé avec succès");
     },
 
@@ -68,3 +69,10 @@ export default defineModule({
 - `onInstall` : Se déclenche quand un admin active le module sur son serveur
 - `onUninstall` : Se déclenche quand un admin désactive le module
 
+## Activer le module
+
+Une fois le fichier créé, redémarrez votre bot. Vous devriez voir dans la console un message confirmant que le module a
+été chargé avec succès.
+
+Vous pouvez maintenant, sur le serveur de votre choix, installer le module via la commande `/modules`. Cliquez simplement sur 
+le bouton "Enable" à coté du nom de votre module.
