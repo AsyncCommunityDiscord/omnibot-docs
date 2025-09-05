@@ -1,0 +1,34 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Configurer l'environnement de développement
+
+Le projet OmniBot utilise **TypeScript** et **Node.js**. Afin de faciliter l'installation de l'environnement, le projet
+fournit un fichier de configuration `mise.toml` ([mise-en-place](https://mise.jdx.dev/)).
+
+:::info
+## Installation de Mise
+<Tabs>
+    <TabItem value={"windows"} label="Windows" default>
+        Pour installer Mise, vous pouvez utiliser la commande suivante dans PowerShell :
+
+        ```powershell
+        // Installation via Winget
+        winget install jdx.mise
+
+        # Installation via Scoop
+        scoop install mise
+
+        # Installation via Chocolatey
+        choco install mise
+        ```
+    </TabItem>
+
+    <TabItem value={"unix"} label="Unix">
+        Pour installer Mise, vous pouvez utiliser la commande suivante dans votre terminal :
+        ```bash
+        curl https://mise.run | sh
+        ```
+    </TabItem>
+</Tabs>
+:::
