@@ -32,3 +32,46 @@ fournit un fichier de configuration `mise.toml` ([mise-en-place](https://mise.jd
     </TabItem>
 </Tabs>
 :::
+
+## Installation des outils via Mise
+
+Après avoir installé Mise, vous pouvez installer tous les outils nécessaires (Node.js, pnpm, etc.) en lançant la commande suivante à la racine du projet :
+
+```bash
+mise install
+```
+
+Cela installera automatiquement toutes les versions requises définies dans le fichier `mise.toml`.
+
+## Installation des dépendances du projet
+
+Installez les dépendances Node.js avec pnpm :
+
+```bash
+pnpm install
+```
+
+## Déploiement de la base de données PostgreSQL
+
+Le projet utilise Docker Compose pour déployer une base PostgreSQL. Assurez-vous d'avoir Docker installé, puis lancez :
+
+```bash
+docker compose up -d
+```
+
+Cela démarre le service PostgreSQL défini dans `compose.yml`.
+
+## Création des migrations Prisma
+
+Après avoir démarré la base de données, générez les migrations Prisma :
+
+```bash
+pnpm prisma:migrate
+```
+
+Cela va créer et appliquer les migrations sur la base PostgreSQL.
+
+---
+
+Avec ces étapes, votre environnement de développement pour OmniBot devrait être prêt ! Vous pouvez maintenant commencer
+à créer et tester vos modules personnalisés.
