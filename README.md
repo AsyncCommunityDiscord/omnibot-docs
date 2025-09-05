@@ -1,41 +1,127 @@
-# Website
+<h3 align="center">
+  <img src="https://avatars.githubusercontent.com/u/78621926?s=200&v=4" width="75" alt="Logo"><br/>
+  Async - Community<br/>
+  This project is under the <a href="https://choosealicense.com/licenses/gpl-3.0/">GNU GPL v3</a> license<br/><br/>
+</h3>
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+# <p align="center">`OmniBot Documentation`</p>
 
-## Installation
+Documentation complète pour OmniBot, le bot Discord de la communauté <code>Async - Community</code>.
+Cette documentation est construite avec Docusaurus et fournit toutes les informations nécessaires pour utiliser et
+développer avec OmniBot.
+
+---
+
+## Informations générales
+
+| Informations générales |                                                                                          |
+|------------------------|------------------------------------------------------------------------------------------|
+| Description            | Documentation officielle d'OmniBot couvrant l'utilisation et le développement de modules |
+| Version                | 1.0                                                                                      |
+| Technologie            | Docusaurus v3 + TypeScript                                                               |
+| URL de production      | [omnibot-docs.redstom.fr](https://omnibot-docs.redstom.fr)                               |
+
+---
+
+## État du projet
+
+![](https://img.shields.io/badge/State-In_development-orange?style=for-the-badge)
+![](https://img.shields.io/github/issues/AsyncCommunityDiscord/omnibot-docs?style=for-the-badge)
+![](https://img.shields.io/github/issues-pr/AsyncCommunityDiscord/omnibot-docs?style=for-the-badge)
+
+---
+
+## 🚀 Démarrage rapide
+
+### Prérequis
+
+- Node.js 18+ ou supérieur
+- pnpm (gestionnaire de paquets recommandé)
+
+### Installation
 
 ```bash
-yarn
+# Cloner le repository
+git clone https://github.com/AsyncCommunityDiscord/omnibot-docs.git
+cd omnibot-docs
+
+# Installer les dépendances
+pnpm install
+
+# Démarrer le serveur de développement
+pnpm start
 ```
 
-## Local Development
+Le site sera accessible sur `http://localhost:3000`
+
+### Scripts disponibles
 
 ```bash
-yarn start
+# Développement local
+pnpm start
+
+# Build de production
+pnpm build
+
+# Prévisualisation du build
+pnpm serve
+
+# Déploiement
+pnpm deploy
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+---
+### Documentation utilisateur
 
-## Build
+Guide complet pour les utilisateurs finaux d'OmniBot :
 
-```bash
-yarn build
-```
+- 📋 Liste des commandes disponibles
+- ⚙️ Configuration du bot sur un serveur
+- 🎯 Exemples d'utilisation pratique
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+### Documentation développeur
 
-## Deployment
+Guide technique pour les développeurs souhaitant étendre OmniBot :
 
-Using SSH:
+- 🏗️ Architecture modulaire du bot
+- 🔧 Création de modules personnalisés
 
-```bash
-USE_SSH=true yarn deploy
-```
+---
 
-Not using SSH:
+## 🤝 Contribution
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
+Nous accueillons toutes les contributions pour améliorer cette documentation !
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### Types de contributions recherchées
+
+- 📝 Amélioration du contenu existant
+- 🆕 Ajout de nouvelles sections
+- 🐛 Correction d'erreurs ou de typos
+- 🎨 Amélioration du design et de l'expérience utilisateur
+- 🔧 Optimisation technique
+
+---
+
+## 📞 Support
+- **Discord** : https://discord.gg/graven
+- **Avancement du projet** : https://github.com/orgs/AsyncCommunityDiscord/projects/2
+
+---
+
+## 📄 Licence
+
+Ce projet est sous licence [GNU GPL v3](https://choosealicense.com/licenses/gpl-3.0/).
+
+---
+
+## 🔗 Liens utiles
+
+- **OmniBot Repository** : [Repo principal](https://github.com/AsyncCommunityDiscord/OmniBot)
+- **Communauté Discord** : [discord.gg/graven](https://discord.gg/graven)
+- **Docusaurus** : [docusaurus.io](https://docusaurus.io/)
+
+---
+
+<p align="center">
+  Fait avec ❤️ par la communauté <strong>Async - Community</strong>
+</p>
