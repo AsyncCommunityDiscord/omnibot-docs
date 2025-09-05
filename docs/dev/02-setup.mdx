@@ -3,37 +3,57 @@ import TabItem from "@theme/TabItem";
 
 # Configurer l'environnement de développement
 
+## Clonage du dépôt
+
+Commencez par cloner le dépôt GitHub du projet OmniBot :
+
+```bash
+# Via HTTPS
+git clone https://github.com/AsyncCommunityDiscord/OmniBot.git
+
+# Via SSH
+git clone git@github.com:AsyncCommunityDiscord/OmniBot.git
+
+# Ensuite, accédez au répertoire du projet
+cd OmniBot
+```
+
+## Installation des outils nécessaires avec Mise
+
 Le projet OmniBot utilise **TypeScript** et **Node.js**. Afin de faciliter l'installation de l'environnement, le projet
 fournit un fichier de configuration `mise.toml` ([mise-en-place](https://mise.jdx.dev/)).
 
-:::info
-## Installation de Mise
-<Tabs>
-    <TabItem value={"windows"} label="Windows" default>
-        Pour installer Mise, vous pouvez utiliser la commande suivante dans PowerShell :
+<details>
+    <summary>
+        Installation de Mise
+    </summary>
+    Si vous n'avez pas encore installé Mise, vous pouvez le faire en suivant les instructions ci-dessous selon votre
+    système d'exploitation. Pour plus d'informations, consultez [le site officiel](https://mise.jdx.dev/installing-mise.html).
+    <Tabs>
+        <TabItem value={"windows"} label="Windows" default>
+            Pour installer Mise, vous pouvez utiliser la commande suivante dans PowerShell :
 
-        ```powershell
-        // Installation via Winget
-        winget install jdx.mise
+            ```powershell
+            # Installation via Winget
+            winget install jdx.mise
 
-        # Installation via Scoop
-        scoop install mise
+            # Installation via Scoop
+            scoop install mise
 
-        # Installation via Chocolatey
-        choco install mise
-        ```
-    </TabItem>
+            # Installation via Chocolatey
+            choco install mise
+            ```
+        </TabItem>
 
-    <TabItem value={"unix"} label="Unix">
-        Pour installer Mise, vous pouvez utiliser la commande suivante dans votre terminal :
-        ```bash
-        curl https://mise.run | sh
-        ```
-    </TabItem>
-</Tabs>
-:::
+        <TabItem value={"unix"} label="Unix">
+            Pour installer Mise, vous pouvez utiliser la commande suivante dans votre terminal :
+            ```bash
+            curl https://mise.run | sh
+            ```
+        </TabItem>
+    </Tabs>
+</details>
 
-## Installation des outils via Mise
 
 Après avoir installé Mise, vous pouvez installer tous les outils nécessaires (Node.js, pnpm, etc.) en lançant la commande suivante à la racine du projet :
 
@@ -61,6 +81,13 @@ docker compose up -d
 
 Cela démarre le service PostgreSQL défini dans `compose.yml`.
 
+### Informations de connexion
+Voici les informations de connexion par défaut à la base de données PostgreSQL :
+
+|    Host     |  Port  | Database |  User  |  Password  |
+|:-----------:|:------:|:--------:|:------:|:----------:|
+| `localhost` | `5432` |  `mydb`  | `user` | `password` |
+
 ## Création des migrations Prisma
 
 Après avoir démarré la base de données, générez les migrations Prisma :
@@ -70,6 +97,16 @@ pnpm prisma:migrate
 ```
 
 Cela va créer et appliquer les migrations sur la base PostgreSQL.
+
+## Ajout des variables d'environnement
+Ajoutez les variables d'environnement suivantes dans un fichier `.env` (que vous devez créer à la racine du projet), ou ajoutez
+les à votre environnement de développement :
+
+| Variable        | Description                           | Exemple                                          |
+|-----------------|---------------------------------------|--------------------------------------------------|
+| `DATABASE_URL`  | URL de connexion à la base de données | `postgresql://user:password@localhost:5432/mydb` |
+| `DISCORD_TOKEN` | Token de votre bot Discord            | `your-discord-bot-token`                         |
+
 
 ---
 
